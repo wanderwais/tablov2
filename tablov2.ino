@@ -1,6 +1,6 @@
 #include <Adafruit_NeoPixel.h>
 #define PIN 4
-#define NUMPIXELS 56 ////ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+#define NUMPIXELS 56
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 #define BUT 2
 // hi
