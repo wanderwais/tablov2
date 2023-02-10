@@ -3,7 +3,7 @@
 #define NUMPIXELS 56 ////ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 #define BUT 2
-
+// hi
 int8_t yacheyki[30] = {16, 17, 27, 37, 47, 46, 45, 44, 43, 42, 41, 31, 32, 33, 34, 35, 36, 26, 25, 24, 23, 22, 21, 11, 12, 13, 14, 15, 16};
 int8_t yach[30] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
