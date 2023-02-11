@@ -86,6 +86,7 @@ void musick(int8_t time) {
 
 
 void setup() {
+pinMode(BUT_RESET, INPUT_PULLUP);
 pinMode(BUT, INPUT_PULLUP);
 pixels.clear();
 pixels.show();
