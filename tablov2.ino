@@ -1,9 +1,10 @@
 #include <Adafruit_NeoPixel.h>
-#define PIN 4
 #define NUMPIXELS 56
-Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+#define PIN 4
 #define BUT 2
 #define BUT_RESET 6
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
 
 int8_t yacheyki[30] = {16, 17, 27, 37, 47, 46, 45, 44, 43, 42, 41, 31, 32, 33, 34, 35, 36, 26, 25, 24, 23, 22, 21, 11, 12, 13, 14, 15, 16};
 int8_t yach[30] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
@@ -11,8 +12,7 @@ int8_t yach[30] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 
 void reset() {
   for (int8_t j = 0; j < 28; j++) {yach[j] = 0;}
-  pixels.clear();
-  pixels.show();
+  cl();
   }
 
 
@@ -23,13 +23,12 @@ void zagruzka() {
     delay(100);
   }
   delay(1000);
-  pixels.clear();
-  pixels.show();
+  cl();
 }
 
 int readButton() {
-  if (digitalRead(BUT) == HIGH) {begushyayaStroka();};
-  if (digitalRead(BUT_RESET) == HIGH) {reset();};
+  if (digitalRead(BUT) == HIGH) {begushyayaStroka(); break;};
+  if (digitalRead(BUT_RESET) == HIGH) {reset(); break;};
   delay(10);
 }
 
@@ -54,9 +53,10 @@ void dinya(int16_t red, int16_t  green, int16_t  blue, int16_t xyz) {
     pixels.show();
     }
 
+void cl() {pixels.clear(); pixels.show();}
+
 void begushyayaStroka() {
-  pixels.clear();
-  pixels.show();
+  cl();
   int8_t rand = random(57, 85);
   int8_t jn, jp = 0;
     if (yach[rand-56] == 0) {
@@ -112,7 +112,4 @@ void loop() {
   cikl();
   //readButton();
 }
-
-
-
 
