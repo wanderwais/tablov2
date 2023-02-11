@@ -96,7 +96,7 @@ pixels.clear();
 }
 
 void cikl() {
-  for (uint32_t fff = 0; fff < 1000; fff++) {
+  for (uint32_t fff = 0; fff < 10000; fff++) {
     readButton();
     };
   animation();
@@ -104,9 +104,12 @@ void cikl() {
 
 
 void animation() {                                    //Сюда надо написать анимацию загрузки и функцию для отмены режима ожидания (в результате любово действия(какого пожелаещь) нужно чтобы была команда "break" или "return")
-  
-
-
+void animation() {                                    //Сюда надо написать анимацию загрузки и функцию для отмены режима ожидания (в результате любово действия(какого пожелаещь) нужно чтобы была команда "break" или "return")
+  while (true) {
+    pixels.setPixelColor(random(0, 56), pixels.Color(random(0, 256), random(0, 256), random(0, 256)));
+    delay(50);
+    pixels.show();
+    if (digitalRead(BUT_RESET) == LOW and digitalRead(BUT) == LOW) {cl(); return 0;}
   }
 
 void loop() {
