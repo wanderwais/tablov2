@@ -10,7 +10,7 @@ int8_t yach[30] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 
 
 void reset() {
-  yach[30] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+  for (int8_t j = 0; j < 28; j++) {yach[j] = 0;}
   pixels.clear();
   pixels.show();
   }
@@ -80,8 +80,8 @@ void begushyayaStroka() {
   }
 
 
-musick(int8_t time) {
-
+void musick(int8_t time) {
+  
   }
 
 
@@ -102,15 +102,16 @@ void cikl() {
   }
 
 
-animation() {
-  zagruzka();
+void animation() {                                    //Сюда надо написать анимацию загрузки и функцию для отмены режима ожидания (в результате любово действия(какого пожелаещь) нужно чтобы была команда "break" или "return")
+  
+
+
   }
 
 void loop() {
   cikl();
   //readButton();
 }
-
 
 
 
