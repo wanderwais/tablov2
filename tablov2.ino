@@ -71,7 +71,7 @@ void begushyayaStroka() {
     jp = jn;
     if (i == rand) {
         dinya(0, 255, 0, yacheyki[jn]);
-        delay(5000);
+        delay(3000);
         vibitiey();
         yach[jn] = 0;
       }
