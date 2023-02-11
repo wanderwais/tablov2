@@ -94,8 +94,21 @@ zagruzka();
 pixels.clear();
 }
 
+void cikl() {
+  for (uint32_t fff = 0; fff < 1000; fff++) {
+    readButton();
+    };
+  animation();
+  }
+
+
+animation() {
+  zagruzka();
+  }
+
 void loop() {
-  readButton();
+  cikl();
+  //readButton();
 }
 
 
