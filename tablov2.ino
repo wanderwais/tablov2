@@ -27,8 +27,8 @@ void zagruzka() {
 }
 
 int readButton() {
-  if (digitalRead(BUT) == HIGH) {begushyayaStroka(); break;};
-  if (digitalRead(BUT_RESET) == HIGH) {reset(); break;};
+  if (digitalRead(BUT) == HIGH) {begushyayaStroka(); return 0;};
+  if (digitalRead(BUT_RESET) == HIGH) {reset(); return 0;};
   delay(10);
 }
 
